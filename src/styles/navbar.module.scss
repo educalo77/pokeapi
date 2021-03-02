@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+
+$nav-height: 70px;
+$nav-font-size: 14px;
+$red: #3761a8;
+$dark: #373737;
+
+@mixin active-link {
+    border-color: $red;
+    text-decoration: none;
+    color: $red;
+}
+
+.navbar-items {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+z-index: 10;
+position: sticky;
+top: 0;
+background-color: white;
+
+
+    ul {
+                list-style: none;
+                display: flex;
+                height: $nav-height;
+                padding: 0px;
+
+                li {
+                    margin: 0;
+
+
+                    a {
+                        display: inline-block;
+                        box-sizing: border-box;
+                        padding-top: ($nav-height / 2) - ($nav-font-size);
+                        padding-bottom: ($nav-height / 2) - ($nav-font-size / 2);
+                        padding-left: 31px;
+                        font: 20pt 'sigmar one';
+                        padding-right: 31px;
+                        padding-bottom: 68px;
+                        height: 100%;
+                        border-bottom: 4px solid transparent;
+                        transition: all ease-out .3s;
+                        outline-offset: -10px;
+                        color: $dark;
+                        text-decoration: none;
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            @include active-link;
+                            color: $dark;
+                            padding-bottom: 68px;
+                        }
+                    }
+
+                    a.active {
+                        @include active-link;
+                    }
+                }
+    }
+}
+.language-select {
+display: flex;
+justify-content: flex-end;
+position: sticky !important;
+top: 16.8%;
+z-index: 10;
+}

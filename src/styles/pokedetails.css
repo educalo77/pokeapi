@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+
+
+
+.heiwei {
+	display: flex;
+	flex-direction: row;
+
+}
+.abilities{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font: 20pt 'sigmar one';
+    color: #feca1b;
+    width: 95%;
+    padding-top: 10px
+}
+.weightpoke{
+	margin-left: 20%;
+	display:flex;
+}
+.ability{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font: 20pt 'sigmar one';
+    color: #feca1b;
+    width: 90%
+}
+
+h3{
+  font: 20pt 'sigmar one';
+  color: #feca1b;
+  padding: 15px;
+  
+
+}
+.moves{
+	display: flex;
+	max-width: 90%;
+	resize: none;
+	text-align: justify;
+}
+.movesh2{
+	max-width: 100%;
+	font: 10pt 'sigmar one';
+    color: #feca1b;
+    text-align: justify;
+
+}
+.movesul{
+	display: inline-block;
+	text-align: justify;
+}
+
+.box{
+	width: 60%;
+	height: 70%;
+	position: absolute;
+	top: 58%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	cursor: pointer;
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.front{
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background: #feca1b;
+	transform: perspective(800px);
+	backface-visibility: hidden;
+	transition: all 0.5s;
+	overflow: hidden;
+}
+.box:hover .front{
+	transform: rotateX(180deg);
+	transition-delay:0.8s;
+}
+.front::before{
+	content: '';
+	position: absolute;
+	bottom: -25px;
+	border-radius: 50%;
+	background:#3761a8;
+	width: 50px;
+	height: 50px;
+}
+.pokename{
+  font: 40pt 'sigmar one';
+  color: #3761a8;
+  text-shadow: 1px 1px 1px #919191,
+  1px 2px 1px #919191,1px 3px 1px #919191,
+  1px 4px 1px #919191,1px 5px 1px #919191,
+  1px 6px 1px #919191,1px 6px 1px #919191,
+  1px 8px 1px #919191,1px 9px 1px #919191,
+  1px 20px 6px rgba(0,0,0,0.5),
+  1px 22px 8px rgba(0,0,0,0.4),
+  1px 24px 10px rgba(0,0,0,0.3);
+  list-style: none;
+  text-decoration: none;
+  transition: color 0.8s ease-out
+}
+.back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:#3761a8;
+	transform: perspective(800px) rotateY(0deg);
+	backface-visibility: hidden;
+	transition: all 0.5s;
+	flex-direction: column;
+	transform: rotateX(180deg);
+
+}
+.box:hover .back{
+	transform: rotateX(0deg);
+	transition-delay:0.8s;
+}
+.back p{
+	margin: 10px 30px;
+}
+span{
+	text-decoration: underline;
+}

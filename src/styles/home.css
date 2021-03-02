@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.pagination {
+  position: relative;
+  padding-top: 6%;
+  margin: auto;
+  display: flex;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a{
+  background-color: #373737 ;
+  border-color: #373737 ;
+  color: #fff;
+}
+.pagination > li > a{
+  border: 1px solid #373737 ;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+  font: 9pt 'sigmar one';
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: #373737 ;
+  border-color: #373737;
+  outline: none ;
+}
+.pagination > li > a, .pagination > li > span{
+  color: #373737
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+  border-radius: unset
+}
+.lista{
+  max-width: 18%;
+  margin: auto;
+}
+
+.list_data{
+  font: 18pt 'sigmar one';
+  color: #feca1b;
+  text-shadow: 1px 1px 1px #919191,
+  1px 2px 1px #919191,1px 3px 1px #919191,
+  1px 4px 1px #919191,1px 5px 1px #919191,
+  1px 6px 1px #919191,1px 6px 1px #919191,
+  1px 8px 1px #919191,1px 9px 1px #919191,
+  1px 20px 6px rgba(0,0,0,0.5),
+  1px 22px 8px rgba(0,0,0,0.4),
+  1px 24px 10px rgba(0,0,0,0.3);
+  list-style: none;
+  text-decoration: none;
+  transition: color 0.8s ease-out
+  
+}
+.list_data:hover{
+  color: #3761a8
+}
+
+.main{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 5%;
+  margin-top: -4%
+}
+
+p{
+  font: 25pt 'sigmar one';
+  color: #feca1b;
+  text-shadow: 1px 1px 1px #919191,
+  1px 2px 1px #919191,1px 3px 1px #919191,
+  1px 4px 1px #919191,1px 5px 1px #919191,
+  1px 6px 1px #919191,1px 6px 1px #919191,
+  1px 8px 1px #919191,1px 9px 1px #919191,
+  1px 20px 6px rgba(0,0,0,0.5),
+  1px 22px 8px rgba(0,0,0,0.4),
+  1px 24px 10px rgba(0,0,0,0.3);
+}

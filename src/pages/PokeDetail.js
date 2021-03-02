@@ -19,7 +19,7 @@ export default function PokeDetail() {
 		const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${name.name}/`)
 		const data = res.data;
 		setInfo(data ? data : '');
-		const preImages = Object.values(data.sprites).filter(el => el !== null).slice(0,4).map(i =>
+		const preImages = Object.values(data.sprites).filter(el => el !== null).slice(0, 4).map(i =>
 			<img src={i} alt="" width="200px" />
 		)
 		setData(preImages)
@@ -34,7 +34,7 @@ export default function PokeDetail() {
 		getData();
 	}, [])
 
-	
+
 
 	return (
 		<div className="box">
@@ -49,9 +49,9 @@ export default function PokeDetail() {
 					<h3 ><span>{t("Height")}: </span> {info ? info.height : ''}</h3>
 					<h3 className="weightpoke"><span className="weightpoke">{t("Weight")}: </span> {info ? info.weight : ''}</h3>
 				</div>
-					<h2 className="ability"><span>{t("Abilities")}: </span> {abilities ? abilities.map(ab => ab) : ''}</h2>
+				<h2 className="ability"><span>{t("Abilities")}: </span> {abilities ? abilities.map(ab => ab) : ''}</h2>
 				<div className="moves" >
-					<h2 className="movesh2" ><span>{t("Moves")}: </span> {info ? info.moves.slice(0,15).map(move =>
+					<h2 className="movesh2" ><span>{t("Moves")}: </span> {info ? info.moves.slice(0, 15).map(move =>
 						<ul className="movesul" >
 							<li>{move.move.name}</li>
 						</ul>

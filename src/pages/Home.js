@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { getAllPokemons } from "../redux/actions";
-import { useSelector, useDispatch } from "react-redux";
 import ReactPaginate from "react-paginate";
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -25,6 +23,7 @@ export default function Home() {
   const getData = async () => {
     const res = await axios.get("https://pokeapi.co/api/v2/pokemon/")
     const data = res.data.results;
+    console.log(data,'data')
     const slice = data.slice(offset, offset + perPage)
     const postData = slice.map(pd =>
 
@@ -39,19 +38,14 @@ export default function Home() {
 
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
-    setOffset(selectedPage + 1)
-  };
-
-  const handleOnClick = (e) => {
-
-    console.log(e.target.outerText)
+    setOffset(selectedPage * 5)
   };
 
 
   return (
     <>
       <div className="main">
-      <p >{t("Seleccione_un_Pokemon")}:</p>
+        <p >{t("Seleccione_un_Pokemon")}:</p>
       </div>
       <div className="App">
         <div  >
@@ -65,7 +59,7 @@ export default function Home() {
             breakClassName={"break-me"}
             pageCount={pageCount}
             marginPagesDisplayed={2}
-            pageRangeDisplayed={10}
+            pageRangeDisplayed={5}
             onPageChange={handlePageClick}
             containerClassName={"pagination"}
             subContainerClassName={"pages pagination"}

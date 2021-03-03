@@ -11,6 +11,7 @@
   display: flex;
   list-style: none;
   outline: none;
+  
 }
 .pagination > .active > a{
   background-color: #373737 ;

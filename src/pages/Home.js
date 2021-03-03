@@ -23,7 +23,6 @@ export default function Home() {
   const getData = async () => {
     const res = await axios.get("https://pokeapi.co/api/v2/pokemon/")
     const data = res.data.results;
-    console.log(data,'data')
     const slice = data.slice(offset, offset + perPage)
     const postData = slice.map(pd =>
 

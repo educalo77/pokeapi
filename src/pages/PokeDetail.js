@@ -38,7 +38,7 @@ export default function PokeDetail() {
 	return (
 		<div className="box">
 			<div className="front center">
-				<h1 className="pokename">{info ? info.name : ''}</h1>
+				{info ? <h1 className="pokename">{info.name}</h1> : <p className="elija">{t("Elija_un_Pokemon_en_la_seccion_Pokemons")}</p>}
 				<div className="imagenes">
 					{data && data.map(e => e)}
 				</div>

@@ -112,7 +112,11 @@ h3{
   1px 24px 10px rgba(0,0,0,0.3);
   list-style: none;
   text-decoration: none;
-  transition: color 0.8s ease-out
+  transition: color 0.8s ease-out;
+}
+.elija{
+	font: 20pt 'sigmar one';
+  	color: white;
 }
 .back {
 	position: absolute;
